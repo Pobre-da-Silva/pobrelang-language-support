@@ -1,0 +1,67 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PobreLang",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#numbers" },
+		{ "include": "#operators" },
+		{ "include": "#identifiers" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pobrelang",
+					"match": "\\b(if|burn|sprint|dispull|goback|work|include|scream|stamp)\\b"
+				},
+				{
+					"name": "entity.name.type.pobrelang",
+					"match": "\\b(item|tag)\\b"
+				},
+				{
+					"name": "entity.name.function.pobrelang",
+					"match": "\\b(listen|antidisestablishmentarianism)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "entity.name.method.pobrelang",
+					"match": "\\b[0-9]|[0-9]\\b"
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.parameter.pobrelang",
+					"match": "\\bPobreLang\/\\w+"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pobrelang",
+			"begin": "^note.+",
+			"end": "\n"
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.pobrelang",
+					"match": ">=|<=|==|>|<|\\/|\\+|-|\\*"
+				}
+			]
+		},
+		"expression": {
+			"patterns": [
+				{ "include": "#numbers" },
+				{ "include": "#strings" },
+				{ "include": "#keywords" },
+				{ "include": "#statements" }
+			]
+		}
+	},
+	"scopeName": "source.pbr"
+}

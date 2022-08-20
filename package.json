@@ -1,0 +1,25 @@
+{
+  "name": "pobrelang",
+  "displayName": "PobreLang",
+  "description": "PobreLang syntax highlight",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pobrelang",
+      "aliases": ["PobreLang", "pobrelang"],
+      "extensions": [".pbr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pobrelang",
+      "scopeName": "source.pbr",
+      "path": "./syntaxes/pobrelang.tmLanguage.json"
+    }]
+  }
+}
