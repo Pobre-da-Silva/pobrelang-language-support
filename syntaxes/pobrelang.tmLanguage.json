@@ -21,7 +21,7 @@
 				},
 				{
 					"name": "entity.name.function.pobrelang",
-					"match": "\\b(listen|antidisestablishmentarianism)\\b"
+					"match": "\\b(listen|antidisestablishmentarianism|shell)\\b"
 				}
 			]
 		},
